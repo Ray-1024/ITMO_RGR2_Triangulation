@@ -11,6 +11,8 @@ class Polygon : public sf::Drawable {
 
 private:
     sf::VertexArray arr;
+    sf::VertexArray lines;
+    sf::VertexArray points;
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
@@ -19,6 +21,8 @@ private:
     void update();
 
     sf::Vector2f getVert(int ind);
+
+    void addLine(int i, int j);
 
 public:
     Polygon();
