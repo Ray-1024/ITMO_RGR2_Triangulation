@@ -38,7 +38,7 @@ void Application::dispatchEvents() {
                 if (event.mouseButton.button == sf::Mouse::Left)
                     polygon.addVertex(event.mouseButton.x, event.mouseButton.y);
                 if (event.mouseButton.button == sf::Mouse::Right)
-                    polygon.circled();
+                    polygon.isCircled();
             }
         }
     }

@@ -14,6 +14,12 @@ private:
 
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
+    bool canAdd(float x, float y);
+
+    void update();
+
+    sf::Vector2f getVert(int ind);
+
 public:
     Polygon();
 
@@ -22,7 +28,7 @@ public:
 
     void clear();
 
-    void circled();
+    void isCircled();
 
 };
 
