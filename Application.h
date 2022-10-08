@@ -6,6 +6,7 @@
 #define RGR2_APPLICATION_H
 
 #include <SFML/Graphics.hpp>
+#include "Polygon.h"
 
 class Application {
 public:
@@ -20,6 +21,7 @@ private:
     sf::VideoMode screenSize;
     std::string title;
     bool running;
+    Polygon polygon;
 
 
     void dispatchEvents();

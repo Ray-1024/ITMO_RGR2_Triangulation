@@ -31,7 +31,14 @@ void Application::dispatchEvents() {
                 break;
             }
             case sf::Event::KeyReleased: {
-
+                if (event.key.code == sf::Keyboard::Space)polygon.clear();
+                if (event.key.code == sf::Keyboard::Escape)running = false;
+            }
+            case sf::Event::MouseButtonReleased: {
+                if (event.mouseButton.button == sf::Mouse::Left)
+                    polygon.addVertex(event.mouseButton.x, event.mouseButton.y);
+                if (event.mouseButton.button == sf::Mouse::Right)
+                    polygon.circled();
             }
         }
     }
@@ -42,5 +49,6 @@ void Application::update() {
 
 void Application::draw() {
     window.clear();
+    window.draw(polygon);
     window.display();
 }
